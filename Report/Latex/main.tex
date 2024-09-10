@@ -1,0 +1,158 @@
+%\documentclass[12pt,a4paper]{article}
+\documentclass[oneside,a4paper,14pt]{extreport}
+\usepackage{tocloft}
+\usepackage[utf8]{}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+\usepackage{xhfill}
+\usepackage{titlesec}
+\usepackage{mdframed}
+\usepackage[english]{babel}
+\usepackage[utf8]{vietnam}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{graphicx}
+\graphicspath{ {figures/} }
+\usepackage{array}
+\usepackage{cases}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float} 
+\usepackage{array, caption, tabularx,  ragged2e,  booktabs}
+\usepackage{hyperref}
+\usepackage{tabulary}
+%\usepackage{minitoc}
+\pgfplotsset{compat=1.5}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows, calc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage[labelsep=endash]{caption}
+\pagestyle{empty}
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\lstset{frame=tb,
+	language=C++,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3
+}
+% Đổi tên mặc định
+\renewcommand{\listfigurename}{Figures}
+\renewcommand{\listtablename}{Tables}
+\renewcommand\lstlistlistingname{List of Pseudo codes}
+\renewcommand{\lstlistingname}{Pseudo code}
+\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+\author{Trần Ngọc Đại}
+\newmdenv[linecolor=black,skipabove=\topsep-1,skipbelow=\topsep-1,
+leftmargin=4pt,rightmargin=4pt,
+innerleftmargin=4pt,innerrightmargin=4pt,
+linewidth=2pt]{mybox}
+
+% Định dạng chapter
+\usepackage{titlesec}
+\titleformat{\chapter}
+    [display] 
+    {\normalfont\bfseries\Large}{\chaptername \ \thechapter}{10pt}{\huge}
+\titlespacing*{\chapter}{0pt}{-10pt}{40pt} %khoảng cách giữa chapter và đầu trang
+
+
+\setcounter{tocdepth}{3} % Đặt sâu độ của mục lục (số lớn hơn để bao gồm subsubsection)
+\setcounter{secnumdepth}{3} % Đặt sâu độ của số (số lớn hơn để đánh số subsubsection)
+
+\begin{document}
+        %cái bìa
+	\fancyhf{}
+	\lhead{Remote Desktop}
+	\rhead{}
+	\cfoot{Page \thepage}
+	\pagestyle{fancy}
+	\renewcommand{\headrulewidth}{1pt}
+	\renewcommand{\footrulewidth}{1pt}
+	\begin{titlepage}
+		\begin{mybox}
+			\begin{center}
+				\fontsize{12}{12}\selectfont
+				\textbf{VIETNAM NATIONAL UNIVERSITY HO CHI MINH CITY}\\
+				\textbf{UNIVERSITY OF SCIENCE}\\
+				\textbf{FACULTY OF INFORMATION TECHNOLOGY}
+			\end{center}
+			\vskip 1.5 cm
+			\begin{figure}[H]
+				\begin{center}
+					\includegraphics[scale=0.25]{img/logo}
+				\end{center}
+			\end{figure}
+			\vskip 2 cm
+			\begin{center}
+				
+				\begin{tabular}{c}
+					\hline\\
+					\fontsize{40}{14}\selectfont
+					\textbf{REPORT}\\\\
+					\fontsize{18}{0}\selectfont
+					\textbf{COMPUTER NETWORK}\\\\
+					
+					\fontsize{16}{12}\selectfont
+					\textbf{PROJECT TOPIC: REMOTE DESKTOP}\\\\
+					\hline
+				\end{tabular}
+				
+				
+			\end{center}
+			\vskip 1cm
+			\doublespacing
+			\hspace*{0.5cm}
+			\fontsize{14}{12}\selectfont
+			\textbf{Students:}
+			Tran Ngoc Dai - 22120045\\
+			\hspace*{3.2cm}Nguyen Hung - 22120122\\
+			\hspace*{3.2cm}Huynh Thanh Tuong - 22120411\\
+			\hspace*{0cm}
+			\quad\textbf{Class:} 22TNT1TN\\
+			\hspace*{0cm}
+			\quad\textbf{Lecturer:} Master Do Hoang Cuong\\
+			
+			
+			
+			\vskip 3.5 cm
+			\begin{center}
+				\textit{Ho Chi Minh, December 2023.}
+			\end{center}
+		\end{mybox}
+	\end{titlepage}
+	\newpage
+
+ 
+    % Mục lục, danh sách hình, danh sách bảng
+    \tableofcontents
+    \newpage
+    
+    % Các chương nội dung
+        \include{Chapter1/GioiThieu}
+
+        \include{Chapter2/ToChucMaNguon}
+
+        \include{Chapter3/ChucNang}
+
+    %Tài liệu tham khảo
+	\begin{thebibliography}{}	
+		\bibitem{lbl}
+		link referencé
+	\end{thebibliography}
+\end{document}
